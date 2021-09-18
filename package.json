@@ -1,14 +1,14 @@
 {
-  "name": "discord-js-handler-template",
+  "name": "updatebot",
   "version": "1.0.0",
-  "description": "Discord.js Command and Event Handler Template with example Command usages!",
+  "description": "Fortnite Tracker Bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "restart": "nodemon ."
   },
-  "author": "Tomato#6966 (author of this template)",
+  "author": "Artlfmj",
   "license": "ISC",
   "dependencies": {
     "ascii-table": "0.0.9",
