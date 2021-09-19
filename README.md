@@ -5,6 +5,8 @@
 
 </p>
 
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Artlfmj.updatebot ) 
+
 ## What is UpdateBot?
 UpdateBot is a Fortnite tracker bot. It has different functions such as automatic shop, news, aes and many others. It is used for leaking purposes such as following new items after an update. All functions are available in the functions folder.
 
