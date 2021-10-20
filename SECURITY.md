@@ -7,6 +7,7 @@ Here are the versions of UpdateBot. You can track deprecation so don't be surpri
 | Version | Supported          |
 | ------- | ------------------ |
 | 2.03    | :white_check_mark: |
+| 2.04    | :white_check_mark: Running tests |
 
 
 ## Reporting a Vulnerability
