@@ -47,7 +47,7 @@ module.exports = async (client) => {
                         if(guild.channels.cache.has(server.channelid)){
                             let lg = await guild_settings.findOne({gid : server.guildid})
                             if(!lg){
-                                lg.text = "en"
+                                lg.lang = "en"
                             }
                             
                             const lgtext = require(`../traductions/${lg.lang}.json`)
