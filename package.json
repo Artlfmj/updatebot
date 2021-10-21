@@ -17,6 +17,7 @@
     "canvas-txt": "^3.0.0",
     "date-events": "^1.0.1",
     "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
     "gifencoder": "^2.0.1",
     "moment": "^2.29.1",
     "mongoose": "^5.12.13",
