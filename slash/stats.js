@@ -2,8 +2,6 @@ const guild_settings = require('../schemes/guild_settings')
 const Settings = require('../schemes/guild_settings')
 const Discord = require('discord.js')
 const ee = require('../botconfig/embed.json')
-const axios = require('axios')
-
 module.exports = {
 	/**
 	 * Generates the shop image in a design similar to the in-game design.
@@ -36,8 +34,8 @@ module.exports = {
         .catch(e => {
             const em = new Discord.MessageEmbed()
             .setColor("RED")
-            .setDescription("An error occured, multiple reasons are possible: \n404 : The account you provided does not exist\n403 : The account you provided hasn't set his stats to public\n400 : Please retry later")
             .setTitle(e.toJSON().name)
+            .setDescription("An error occured, multiple reasons are possible: \n404 : The account you provided does not exist\n403 : The account you provided hasn't set his stats to public\n400 : Please retry later")
             .setFooter(e.toJSON().message)
             return interaction.editReply({embeds : [em]})
         })

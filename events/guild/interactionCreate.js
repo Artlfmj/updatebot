@@ -34,9 +34,6 @@ module.exports = async (client, interaction) => {
     } else if(interaction.commandId === "880853624459239505"){
         const slash = require('../../slash/tab')
         await slash.slash(client, interaction)
-    } else if(interaction.commandId === "900762986875060235"){
-        const slash = require('../../slash/stats')
-        await slash.slash(client, interaction)
     }else {
         return interaction.reply({content : "An error occured", ephemeral : true})
     }
