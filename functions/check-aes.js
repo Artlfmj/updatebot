@@ -11,7 +11,7 @@ const guild_settings = require('../schemes/guild_settings');
 
 module.exports = async (client) => {
     
-    clock.on('minute', async() =>{
+    clock.on('second', async() =>{
         await get("https://fortnite-api.com/v2/aes", {
             params : {
                 lang : "fr"
@@ -42,13 +42,14 @@ module.exports = async (client) => {
                 if(!servers) return
                 servers.forEach(async(server) => {
                     if(client.guilds.cache.has(server.guildid)){
-                        const guild = client.guilds.cache.get(server.guildid)
+                        const guild = await client.guilds.cache.get(server.guildid)
                         
                         if(guild.channels.cache.has(server.channelid)){
                             let lg = await guild_settings.findOne({gid : server.guildid})
                             if(!lg){
                                 lg.lang = "en"
                             }
+                            console.log(lg)
                             
                             const lgtext = require(`../traductions/${lg.lang}.json`)
                             const embed = new Discord.MessageEmbed()
@@ -93,15 +94,13 @@ module.exports = async (client) => {
                             if(guild.channels.cache.has(server.channelid)){
                                 let lg = await guild_settings.findOne({gid : server.guildid})
                                 if(!lg){
-                                    const nlg = new guild_settings({
+                                    lg = {
                                         gid : server.guildid,
                                         prefix : "!",
                                         lang : "en"
-                                    })
-                                    await nlg.save()
-                                    lg = await guild_settings.findOne({gid : server.guildid})
+                                    }
                                 }
-                                
+                                console.log(lg)
                                 const lgtext = require(`../traductions/${lg.lang}.json`)
                                 const embed = new Discord.MessageEmbed()
                                 .setColor(ee.color)
@@ -109,12 +108,25 @@ module.exports = async (client) => {
                                 .setDescription(`${lgtext["004"]} ${key.pakFilename}: ${key.key}`)
                                 .setTimestamp(req.data.data.updated)
                                 
-                                client.channels.cache.get(server.channelid).send({embeds : [embed]})
-                                .then(m => {
-                                    if(m.crosspostable){
-                                        m.crosspost()
-                                    }
+                                const channel = await client.channels.cache.get(server.channelid)
+                                const botPermissionsFor = channel.permissionsFor(client.user);
+                                console.log(botPermissionsFor)
+                                if(botPermissionsFor){
+
+                                }
+                                channel.send({embeds : [embed]})
+                                .catch(e => {
+                                    return console.error(e)
                                 })
+                                .then(m => {
+                                    if(m){
+                                        if(m.crosspostable){
+                                            m.crosspost()
+                                        }
+                                    }
+                                    
+                                })
+                                
                             } else {
                                 console.log(`Un salon pour le post d'aes est inexistant : ${server.guildid}\nSuppression en cours...`);
                                 server.delete();
