@@ -136,6 +136,19 @@ module.exports = async (client) => {
                         }
                         
                     })
+
+                    newnews.forEach(async(nws) => {
+                        let p = new news({
+                            id : nws.id,
+                            title : nws.title,
+                            date: new Date(),
+                            body : nws.body,
+                            images : nws.image,
+                            video : nws.video || null,
+                            language : "en"
+                        })
+                        p.save()
+                    })
                     
 
 
