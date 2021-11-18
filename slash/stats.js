@@ -3,7 +3,7 @@ const Settings = require('../schemes/guild_settings')
 const Discord = require('discord.js')
 const ee = require('../botconfig/embed.json')
 const axios = require('axios')
-module.exports = {
+module.exports.run = {
 	/**
 	 * Generates the shop image in a design similar to the in-game design.
 	 */
