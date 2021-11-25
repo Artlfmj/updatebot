@@ -3,6 +3,7 @@ const Discord = require("discord.js"); //this is the official discord.js wrapper
 const colors = require("colors"); //this Package is used, to change the colors of our Console! (optional and doesnt effect performance)
 const fs = require("fs"); //this package is for reading files and getting their inputs
 require("dotenv").config();
+const chalk = require("chalk");
 
 let MkDir = [".cache", ".cache/commands"];
 
@@ -54,13 +55,18 @@ client
       let cac = getCacheEntry("commands", cmd.id);
       if (!commands.find((c) => c.name === cmd.json.name)) {
         let res = client.application.commands.create(cmd.json);
+        console.log(
+          chalk.bold.green("Successfully registered command " + cmd.name)
+        );
         res.commandversion = cmd.data.version;
         addCacheEntry("commands", res);
       } else {
-        let da = commands.find((c) => c.name === cmd.json.name)
-        
+        let da = commands.find((c) => c.name === cmd.json.name);
+        if (!cac.version != cmd.data.version) {
+          client.application.commands.edit(da.id, cmd.json);
+        }
+        client.slash.set(cmd.json);
       }
-
     });
   })
 
