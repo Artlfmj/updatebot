@@ -4,18 +4,7 @@ const colors = require("colors"); //this Package is used, to change the colors o
 const fs = require("fs"); //this package is for reading files and getting their inputs
 require("dotenv").config();
 const chalk = require("chalk");
-
-let MkDir = [".cache", ".cache/commands"];
-
-MkDir.forEach((dir) => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdir(dir);
-  }
-});
-
-if (!fs.existsSync(".cache/cache.json")) {
-  fs.writeFileSync(".cache/cache.json", JSON.parse([]));
-}
+let params = require("./schemes/guild_settings");
 
 //Creating the Discord.js Client for This Bot with some default settings ;) and with partials, so you can fetch OLD messages
 const client = new Discord.Client({
@@ -43,39 +32,31 @@ const client = new Discord.Client({
 //Client variables to use everywhere
 client.commands = new Discord.Collection(); //an collection (like a digital map(database)) for all your commands
 client.aliases = new Discord.Collection(); //an collection for all your command-aliases
-client.categories = fs.readdirSync("./commands/"); //categories
 client.cooldowns = new Discord.Collection(); //an collection for cooldown commands of each user
 client.slash = new Discord.Collection();
 
-client
-  .on("ready", async () => {
-    let commands = await client.application.commands.fetch().toJSON();
-    fs.readdirSync("slash-json").forEach((file) => {
-      let cmd = require(file);
-      let cac = getCacheEntry("commands", cmd.id);
-      if (!commands.find((c) => c.name === cmd.json.name)) {
-        let res = client.application.commands.create(cmd.json);
-        console.log(
-          chalk.bold.green("Successfully registered command " + cmd.name)
-        );
-        res.commandversion = cmd.data.version;
-        addCacheEntry("commands", res);
-      } else {
-        let da = commands.find((c) => c.name === cmd.json.name);
-        if (!cac.version != cmd.data.version) {
-          client.application.commands.edit(da.id, cmd.json);
-        }
-        client.slash.set(cmd.json);
-      }
-    });
-  })
-
-  [
-    //Loading files, with the client variable like Command Handler, Event Handler, ...
-    ("command", "events")
-  ].forEach((handler) => {
-    require(`./handlers/${handler}`)(client);
+client.getTranslations = async(guildId) => {
+  let lang = "en";
+  let sett = await params.findOne({
+    gid: guildId,
   });
+  if (sett) lang = sett.lang;
+  if(!sett) {
+    let newSett = new params({
+      gid: guildId,
+      lang: "en",
+    });
+    await newSett.save();
+  }
+  return require(`./traductions/${lang}.json`);
+};
+
+[
+  //Loading files, with the client variable like Command Handler, Event Handler, ...
+  ("command", "events"),
+].forEach((handler) => {
+  require(`./handlers/${handler}`)(client);
+});
 
 const featuresDir = "functions";
 for (const fileName of fs.readdirSync(featuresDir)) {
@@ -93,25 +74,3 @@ mongoose.Promise = global.Promise;
 mongoose.Promise = global.Promise;
 //login into the bot
 client.login(require("./botconfig/config.json").token);
-
-/** Add Cache Entry */
-
-function addCacheEntry(group, data) {
-  if (data != Object) throw new Error("Please provide a object");
-  let json = await JSON.parse(fs.readFileSync(".cache/cache.json"));
-  if (!json[group]) {
-    json[group] = [];
-  }
-  json[group].push(data);
-  fs.writeFileSync(".cache/cache.json", JSON.stringify(json));
-}
-
-/** Find Cache Entry */
-
-function getCacheEntry(group, data) {
-  if (data != Object) throw new Error("Please provide a object");
-  let json = await JSON.parse(fs.readFileSync(".cache/cache.json"));
-  if (!json[group]) return { result: false };
-  if (!json[group].find((c) => c.id === data.id)) return { result: false };
-  return { result: true, items: json[group].find((c) => c.id === data.id) };
-}
