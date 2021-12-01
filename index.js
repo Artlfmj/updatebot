@@ -48,7 +48,7 @@ client.getTranslations = async(guildId) => {
     });
     await newSett.save();
   }
-  return require(`./traductions/${lang}.json`);
+  return require(`./translations/${lang}.json`);
 };
 
 [
