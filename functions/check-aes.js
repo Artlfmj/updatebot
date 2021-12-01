@@ -51,7 +51,7 @@ module.exports = async (client) => {
                             }
                             console.log(lg)
                             
-                            const lgtext = require(`../traductions/${lg.lang}.json`)
+                            const lgtext = require(`../translations/${lg.lang}.json`)
                             const embed = new Discord.MessageEmbed()
                             .setColor(ee.color)
                             .setTitle(`${req.data.data.build} \n${lgtext["001"]}`)
@@ -101,7 +101,7 @@ module.exports = async (client) => {
                                     }
                                 }
                                 console.log(lg)
-                                const lgtext = require(`../traductions/${lg.lang}.json`)
+                                const lgtext = require(`../translations/${lg.lang}.json`)
                                 const embed = new Discord.MessageEmbed()
                                 .setColor(ee.color)
                                 .setTitle(`${req.data.data.build}\n${lgtext["003"]}`)
