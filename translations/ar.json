@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "هذا هو مفتاح AES المكتشف للملف",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "Un tab a été supprimé de l'api",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"مفتاح إصدار AES الجديد!","002":"هنا هو مفتاح AES المكتشف:","003":"مفتاح AES ديناميكي جديد!","004":"هذا هو مفتاح AES المكتشف للملف","005":"تمت إضافة علامة تبويب جديدة في واجهة برمجة التطبيقات","006":"هوية شخصية","007":"الاسم المعروض","008":"تم حذف علامة تبويب من API","009":"تلقي إشعار عند توفر مفتاح AES جديد","010":"اشترك في وظيفة","011":"حدد الوظيفة التي ترغب في الاشتراك بها ** اشتراك ** اشتراك","012":"انقضى الوقت","013":"لاستخدام هذه الوظيفة ، يرجى تكرار الأمر","014":"ليس لديك الحق في استخدام هذا الأمر","015":"تلقي إشعار عند توفر متجر جديد","017":"تلقي إشعار عند إضافة علامة تبويب جديدة إلى واجهة برمجة التطبيقات","019":"النجاح","021":"تم تسجيل الوظيفة بالفعل","016":"تلقي إشعار عند نشر خبر جديد","020":"تمت إضافة الوظيفة بنجاح","018":"تلقي إشعار عند توفر مستحضرات تجميل جديدة"}

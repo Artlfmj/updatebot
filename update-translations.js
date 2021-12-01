@@ -29,9 +29,9 @@ languages.forEach(async language => {
         console.log(`${language}: ${key} => ${translationValue}`);
         // Write the translation to the file
         fs.writeFileSync(
-            `./traductions/${language}.json`,
+            `./translations/${language}.json`,
             JSON.stringify({
-                ...JSON.parse(fs.readFileSync(`./traductions/${language}.json`)),
+                ...JSON.parse(fs.readFileSync(`./translations/${language}.json`)),
                 [key]: translationValue
             })
         );

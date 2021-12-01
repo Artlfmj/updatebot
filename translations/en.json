@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "A tab has been deleted from the API",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"New AES version key!","002":"Here is the AES key detected:","003":"New dynamic AES key!","004":"Here is the AES key detected for the file","005":"New tab added in the API","006":"ID","007":"shown name","008":"A tab has been deleted from the API","009":"Receive notification when a new AES key is available","010":"Subscribe to a function","011":"Select the function to which you wish to subscribe ** subscribe ** subscribe","012":"Time elapsed","013":"To use this function, please repeat the command","014":"You do not have the rights to use this command","020":"Function has been added successfully","016":"Receive a notification when a new news is published","017":"Receive notification when a new tab is added to the API","021":"The Function was already registered","019":"Success","015":"Receive a notification when a new store is available","018":"Receive notification when new cosmetics are available"}

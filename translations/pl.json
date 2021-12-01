@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "NS",
-  "007": "Nom affiché",
-  "008": "Un tab a été supprimé de l'api",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"Nowy klucz wersji AES!","002":"Oto wykryty klucz AES:","003":"Nowy dynamiczny klucz AES!","004":"Oto klucz AES wykryty dla pliku","005":"Dodano nową zakładkę w API","006":"NS","007":"pokazane imię","008":"Karta została usunięta z API","009":"Otrzymuj powiadomienie, gdy nowy klucz AES jest dostępny","010":"Subskrybuj funkcję","011":"Wybierz funkcję, którą chcesz subskrybować ** subskrybuj ** subskrybuj","012":"Czas, jaki upłynął","013":"Aby skorzystać z tej funkcji, powtórz polecenie","014":"Nie masz uprawnień do korzystania z tego polecenia","016":"Otrzymuj powiadomienie, gdy pojawi się nowa wiadomość","015":"Otrzymuj powiadomienie, gdy nowy sklep jest dostępny","019":"Powodzenie","018":"Otrzymuj powiadomienia, gdy dostępne są nowe kosmetyki","017":"Otrzymuj powiadomienia, gdy do API zostanie dodana nowa karta","020":"Funkcja została pomyślnie dodana","021":"Funkcja została już zarejestrowana"}

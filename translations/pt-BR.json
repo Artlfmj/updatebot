@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "Un tab a été supprimé de l'api",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Para usar esta função, por favor, repita o comando",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"Nova chave de versão AES!","002":"Aqui está a chave AES detectada:","003":"Nova chave AES dinâmica!","004":"Aqui está a chave AES detectada para o arquivo","005":"Nova guia adicionada na API","006":"EU IRIA","007":"nome mostrado","008":"Uma guia foi excluída da API","009":"Receba uma notificação quando uma nova chave AES estiver disponível","010":"Inscrever-se em uma função","011":"Selecione a função para a qual deseja se inscrever ** inscrever-se ** inscrever-se","012":"Tempo decorrido","013":"Para usar esta função, por favor, repita o comando","014":"Você não tem os direitos para usar este comando","019":"Sucesso","017":"Receba uma notificação quando uma nova guia for adicionada à API","016":"Receba uma notificação quando uma nova notícia for publicada","018":"Receba uma notificação quando novos cosméticos estiverem disponíveis","020":"A função foi adicionada com sucesso","021":"A função já foi registrada","015":"Receba uma notificação quando uma nova loja estiver disponível"}

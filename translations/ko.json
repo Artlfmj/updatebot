@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "API에서 탭이 삭제되었습니다.",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"새로운 AES 버전 키!","002":"다음은 감지된 AES 키입니다.","003":"새로운 동적 AES 키!","004":"다음은 파일에 대해 감지된 AES 키입니다.","005":"API에 새 탭 추가","006":"ID","007":"표시된 이름","008":"API에서 탭이 삭제되었습니다.","009":"새 AES 키를 사용할 수 있을 때 알림 받기","010":"기능 구독","011":"구독하고 싶은 기능을 선택하세요 ** 구독하기 ** 구독하기","012":"경과 시간","013":"이 기능을 사용하려면 명령을 반복하십시오.","014":"이 명령을 사용할 권한이 없습니다","015":"새로운 매장이 생겼을 때 알림 받기","020":"기능이 성공적으로 추가되었습니다","019":"성공","021":"기능이 이미 등록되었습니다.","018":"새로운 화장품이 출시되면 알림 받기","016":"새로운 뉴스가 게시되면 알림 받기","017":"API에 새 탭이 추가되면 알림 수신"}

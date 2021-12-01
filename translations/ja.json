@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "Un tab a été supprimé de l'api",
-  "009": "新しいAESキーが利用可能になったときに通知を受け取る",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"新しいAESバージョンキー！","002":"検出されたAESキーは次のとおりです。","003":"新しい動的AESキー！","004":"これがファイルに対して検出されたAESキーです","005":"APIに追加された新しいタブ","006":"ID","007":"表示名","008":"タブがAPIから削除されました","009":"新しいAESキーが利用可能になったときに通知を受け取る","010":"関数をサブスクライブする","011":"サブスクライブしたい機能を選択してください**サブスクライブ**サブスクライブ","012":"時間が経過した","013":"この機能を使用するには、コマンドを繰り返してください","014":"このコマンドを使用する権限がありません","019":"成功","020":"機能が正常に追加されました","015":"新しいストアが利用可能になったときに通知を受け取ります","017":"新しいタブがAPIに追加されたときに通知を受け取ります","016":"新しいニュースが公開されたときに通知を受け取る","018":"新しい化粧品が利用可能になったときに通知を受け取ります","021":"機能はすでに登録されています"}

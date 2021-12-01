@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Yeni dinamik AES anahtarı!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "Un tab a été supprimé de l'api",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"Yeni AES sürüm anahtarı!","002":"İşte algılanan AES anahtarı:","003":"Yeni dinamik AES anahtarı!","004":"İşte dosya için algılanan AES anahtarı","005":"API'ye yeni sekme eklendi","006":"İD","007":"gösterilen isim","008":"API'den bir sekme silindi","009":"Yeni bir AES anahtarı mevcut olduğunda bildirim alın","010":"Bir işleve abone ol","011":"Abone olmak istediğiniz işlevi seçin ** abone olun ** abone olun","012":"Geçen süre","013":"Bu işlevi kullanmak için lütfen komutu tekrarlayın","014":"Bu komutu kullanma haklarına sahip değilsiniz","015":"Yeni bir mağaza mevcut olduğunda bir bildirim alın","021":"İşlev zaten kayıtlıydı","018":"Yeni kozmetikler mevcut olduğunda bildirim alın","019":"Başarı","017":"API'ye yeni bir sekme eklendiğinde bildirim alın","016":"Yeni bir haber yayınlandığında bildirim alın","020":"İşlev başarıyla eklendi"}

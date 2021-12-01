@@ -1,16 +1,1 @@
-{
-  "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
-  "003": "Nouvelle clé AES dynamique!",
-  "004": "Voici la clé AES detectée pour le fichier",
-  "005": "Nouveau tab ajouté dans l'api",
-  "006": "ID",
-  "007": "Nom affiché",
-  "008": "Un tab a été supprimé de l'api",
-  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
-  "010": "S'abonner a une fonction",
-  "011": "Wählen Sie die Funktion aus, die Sie abonnieren möchten ** abonnieren ** abonnieren",
-  "012": "Temps ecoulé",
-  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
-  "014": "Vous n'avez pas les droits pour utiliser cette commande"
-}
+{"001":"Neuer AES-Versionsschlüssel!","002":"Hier ist der erkannte AES-Schlüssel:","003":"Neuer dynamischer AES-Schlüssel!","004":"Hier ist der für die Datei erkannte AES-Schlüssel","005":"Neuer Tab in der API hinzugefügt","006":"ICH WÜRDE","007":"Angezeigter Name","008":"Ein Tab wurde aus der API gelöscht","009":"Erhalten Sie eine Benachrichtigung, wenn ein neuer AES-Schlüssel verfügbar ist","010":"Eine Funktion abonnieren","011":"Wählen Sie die Funktion aus, die Sie abonnieren möchten ** abonnieren ** abonnieren","012":"Verstrichene Zeit","013":"Um diese Funktion zu nutzen, wiederholen Sie bitte den Befehl","014":"Sie haben nicht die Berechtigung, diesen Befehl zu verwenden","021":"Die Funktion wurde bereits registriert","020":"Funktion wurde erfolgreich hinzugefügt","015":"Erhalten Sie eine Benachrichtigung, wenn ein neuer Shop verfügbar ist","019":"Erfolg","018":"Erhalten Sie eine Benachrichtigung, wenn neue Kosmetika verfügbar sind","016":"Erhalten Sie eine Benachrichtigung, wenn eine neue Nachricht veröffentlicht wird","017":"Benachrichtigung erhalten, wenn der API ein neuer Tab hinzugefügt wird"}
