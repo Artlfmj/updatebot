@@ -1,8 +1,4 @@
-module.exports.json = {
+module.exports = {
     name : "subscribe",
     description : "Subscribe to a new function"
-}
-
-module.exports.data = {
-    version : 1
 }
