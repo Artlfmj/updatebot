@@ -11,7 +11,7 @@ const guild_settings = require('../schemes/guild_settings')
 
 module.exports = async (client) => {
     clock.on('minute', async() =>{
-        const languages = require('../traductions/languages.json')
+        const languages = require('../translations/languages.json')
         for(const language of languages){
             await get("https://fortniteapi.io/v2/shop/sections/list", {
                 params : {
