@@ -1,10 +1,10 @@
 // Grab the fr.json and translate it to all languages in the languages array
 
 // Load the json file
-const fr = require("./traductions/fr.json");
+const fr = require("./translations/fr.json");
 
 // Load the languages array
-const languages = require("./traductions/languages.json");
+const languages = require("./translations/languages.json");
 
 // Load the fs module
 const fs = require("fs");
@@ -28,6 +28,12 @@ languages.forEach(async language => {
         const translationValue = translation.data[0][0][0];
         console.log(`${language}: ${key} => ${translationValue}`);
         // Write the translation to the file
-        fs.writeFileSync(`./translations/${language}.json`, JSON.stringify({ ...fr, [key]: translationValue }, null, 2));
+        fs.writeFileSync(
+            `./traductions/${language}.json`,
+            JSON.stringify({
+                ...JSON.parse(fs.readFileSync(`./traductions/${language}.json`)),
+                [key]: translationValue
+            })
+        );
     });
 });

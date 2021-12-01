@@ -1,0 +1,16 @@
+{
+  "001": "Nouvelle clé AES de version!",
+  "002": "Voici la clé AES detectée:",
+  "003": "Nouvelle clé AES dynamique!",
+  "004": "Voici la clé AES detectée pour le fichier",
+  "005": "Nouveau tab ajouté dans l'api",
+  "006": "ID",
+  "007": "Nom affiché",
+  "008": "Un tab a été supprimé de l'api",
+  "009": "Recevoir une notification quand une nouvelle clé AES est disponible",
+  "010": "S'abonner a une fonction",
+  "011": "Selectionner la fonction à laquelle vous souhaiter vous abonner **vous** abonner",
+  "012": "Tempo trascorso",
+  "013": "Pour utiliser cette fonction, veuilez refaire la commande",
+  "014": "Vous n'avez pas les droits pour utiliser cette commande"
+}
