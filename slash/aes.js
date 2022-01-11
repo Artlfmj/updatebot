@@ -1,23 +1,36 @@
-const Discord = require('discord.js')
-const channel = require('../schemes/channel')
-const { get } = require('axios')
-const ee = require('../botconfig/embed.json')
-module.exports = {
-	/**
-	 * Generates the shop image in a design similar to the in-game design.
-	 */
-	async slash(client, interaction) {
-        const aes = await get("https://fortnite-api.com/v2/aes")
-        const embed = new Discord.MessageEmbed()
-        .setTitle(`Current AES keys for ${aes.data.data.build}`)
-        .setColor(ee.color)
-        .addField('Main Key', aes.data.data.mainKey)
-        .addField('Dynamic Keys', '\u200b')
-        
-        aes.data.data.dynamicKeys.forEach(key => {
-            embed.addField(key.pakFilename, key.key)
-        })
-       
-        interaction.reply({embeds : [embed]})
-    }
-}
+const Discord = require("discord.js");
+const axios = require("axios").default;
+
+module.exports.run = async (client, interaction, translations) => {
+  let aes = await axios.get("https://fortnite-api.com/v2/aes").catch((err) => {
+    return interaction.reply({
+      embeds: [
+        new Discord.MessageEmbed()
+          .setColor("RANDOM")
+          .setTitle(translations["040"])
+          .setDescription(translations["041"]),
+      ],
+    });
+  });
+  if (aes) {
+    let keys = []
+    aes.data.data.dynamicKeys.forEach(key => {if(key.pakFilename.includes(".pak")) {keys.push(key)}})
+    let fields = keys.map((key) => {
+      return {
+        name: key.pakFilename,
+        value: key.key,
+        inline: false,
+      };
+    });
+    return interaction.reply({
+      embeds: [
+        new Discord.MessageEmbed()
+          .setColor("#ff0000")
+          .setTitle(
+            translations["039"].replace("{{version}}", aes.data.data.build)
+          )
+          .addFields(fields),
+      ],
+    });
+  }
+};

@@ -34,7 +34,6 @@ client.commands = new Discord.Collection(); //an collection (like a digital map(
 client.aliases = new Discord.Collection(); //an collection for all your command-aliases
 client.cooldowns = new Discord.Collection(); //an collection for cooldown commands of each user
 client.slash = new Discord.Collection();
-
 client.getTranslations = async(guildId) => {
   let lang = "en";
   let sett = await params.findOne({

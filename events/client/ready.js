@@ -4,9 +4,12 @@ const Discord  = require("discord.js");
 const chalk = require("chalk");
 const fs = require("fs");
 module.exports = async(client) => {
+  console.log(chalk.bold.green(`Discord Bot ${client.user.tag} is online!`));
+  client.user.setPresence({ activities: [{ name: "looking for your skins" }] });
   client.commands = new Discord.Collection();
   let avail = []
   client.handlers = new Discord.Collection();
+  client.buttons = new Discord.Collection();
   client.buttons = new Discord.Collection();
   client.menus = new Discord.Collection();
   const jsondir = "slash-json";
@@ -27,7 +30,7 @@ module.exports = async(client) => {
   const cmdDir = "slash";
   for (const fileName of fs.readdirSync(cmdDir)) {
     const fileContent = require(`../../${cmdDir}/${fileName}`);
-    client.handlers.set(fileName.split(".")[0], fileContent);
+    client.handlers.set(fileName.replace(".js", ""), fileContent);
     console.log(chalk.bold.green(`Loaded handler ${fileName}`));
   }
   const butDir = "buttons";
@@ -42,23 +45,7 @@ module.exports = async(client) => {
     client.menus.set(fileName.split(".")[0], fileContent);
     console.log(chalk.bold.green(`Loaded menu ${fileName}`));
   }
-  try{
-    const stringlength = 69;
-    console.log("\n")
-    console.log(`     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`.bold.brightGreen)
-    console.log(`     ┃ `.bold.brightGreen + " ".repeat(-1+stringlength-` ┃ `.length)+ "┃".bold.brightGreen)
-    console.log(`     ┃ `.bold.brightGreen + `Discord Bot is online!`.bold.brightGreen + " ".repeat(-1+stringlength-` ┃ `.length-`Discord Bot is online!`.length)+ "┃".bold.brightGreen)
-    console.log(`     ┃ `.bold.brightGreen + ` /--/ ${client.user.tag} /--/ `.bold.brightGreen+ " ".repeat(-1+stringlength-` ┃ `.length-` /--/ ${client.user.tag} /--/ `.length)+ "┃".bold.brightGreen)
-    console.log(`     ┃ `.bold.brightGreen + " ".repeat(-1+stringlength-` ┃ `.length)+ "┃".bold.brightGreen)
-    console.log(`     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`.bold.brightGreen)
-    
-  }catch{ /* */ }
-
-  try{
-    client.user.setActivity(client.user.username, { type: "PLAYING" });
-  }catch (e) {
-      console.log(String(e.stack).red);
-  }
+  client.user.setActivity(`with fortnite apis`, { type: "WATCHING" });
   //Change status each 10 minutes
   setInterval(()=>{
     try{
