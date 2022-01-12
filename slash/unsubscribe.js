@@ -2,6 +2,14 @@ const Discord = require('discord.js')
 const channel = require('../schemes/channel')
 
 module.exports.run = async (client, interaction, translations) => {
+	if(!interaction.member) return interaction.reply({
+		embeds : [
+			new Discord.MessageEmbed()
+			.setColor("RED")
+			.setTitle(translations["040"])
+			.setDescription(translations["065"])
+		]
+	})
 	if(interaction.member.permissions.has(Discord.Permissions.FLAGS.ADMINISTRATOR)){
 		const channels = await channel.find({
 		guildid: interaction.guildId
