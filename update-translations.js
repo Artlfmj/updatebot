@@ -33,7 +33,7 @@ languages.forEach(async language => {
             JSON.stringify({
                 ...JSON.parse(fs.readFileSync(`./translations/${language}.json`)),
                 [key]: translationValue
-            })
+            }, null, 4),
         );
     });
 });
