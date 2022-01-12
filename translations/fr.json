@@ -1,6 +1,6 @@
 {
   "001": "Nouvelle clé AES de version!",
-  "002": "Voici la clé AES detectée:",
+  "002": "Voici la clé AES detectée: ",
   "003": "Nouvelle clé AES dynamique!",
   "004": "Voici la clé AES detectée pour le fichier",
   "005": "Nouveau tab ajouté dans l'api",
