@@ -104,40 +104,33 @@ module.exports = async (client) => {
 
                     encoder.finish()
                     const servers = await Channels.find({function : "news"})
-                
-                    if(!servers) return
-                    servers.forEach(async(server) => {
-                        if(client.guilds.cache.has(server.guildid)){
-                            const guild = client.guilds.cache.get(server.guildid)
-                            
-                            if(guild.channels.cache.has(server.channelid)){
-                                let lg = await guild_settings.findOne({gid : server.guildid})
-                                if(!lg){
-                                    lg.text = "en"
-                                }
-                                
-                                const lgtext = require(`../traductions/${lg.lang}.json`)
-                                const attach = new Discord.MessageAttachment()
-                                .setFile(`assets/news/br/${language}.gif`)
-                                .setName('news.gif')
-                                client.channels.cache.get(server.channelid).send({files : [attach]})
-                                .then(m => {
-                                    if(m.crosspostable){
-                                        m.crosspost()
-                                    }
-                                })
-                            } else {
-                                console.log(`Un salon pour le post d'aes est inexistant : ${server.guildid}\nSuppression en cours...`);
-                                server.delete();
+                    servers.forEach(async server => {
+                        try {
+                            let lang = "en"
+                            const lg = await guild_settings.findOne({guildId : server.guildid})
+                            if(lg){
+                                lang = lg.lang
                             }
-                        } else {
-                            console.log(`Un serveur pour le post d'aes est inexistant : ${server.guildid}\nSuppression en cours...`);
-                            server.delete();
+                            if(lang === language){
+                            const channel =  await client.channels.cache.get(server.channelid)
+                            channel.send({files : [{attachment : `assets/news/br/${language}.gif`, name : `${language}.gif`}]})
+                            }
+                        } catch {
+
                         }
-                        
                     })
                     
-
+                    newnews.forEach(nes => {
+                        const nnews = new news({
+                            id : nes.id,
+                            title : nes.title,
+                            body : nes.body,
+                            image : nes.image,
+                            tabTitle : nes.tabTitle,
+                            language : language
+                        })
+                        nnews.save()
+                    })
 
             }
         }
