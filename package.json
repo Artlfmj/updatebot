@@ -20,7 +20,7 @@
     "dotenv": "^10.0.0",
     "gifencoder": "^2.0.1",
     "moment": "^2.29.2",
-    "mongoose": "^5.12.13",
+    "mongoose": "^5.13.15",
     "quick.db": "^7.1.3",
     "replay-reader": "^2.1.0",
     "tslib": "^2.3.0"
